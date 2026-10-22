@@ -4,7 +4,7 @@
 public class App {
     public static void main(String[] args) throws Exception {
         
-        int ika = 100;
+        int ika = 70;
 
         // Tulostetaan iän mukaiset lauseet.
 
@@ -21,13 +21,17 @@ public class App {
             }
         }
         // Jos käyttäjä on yli 65-vuotias, kerrotaan hänen olevan eläkeläinen.
-        // Jos ikä on 100, tulostetaan kolmirivinen onnittelu.
         else if (ika >= 65) {
             System.out.println("Olet eläkeläinen");
+            // Jos ikä on 100, tulostetaan kolmirivinen onnittelu.
             if (ika == 100) {
                 System.out.println("***** Paljon *****");
                 System.out.println("****** onnea *****");
                 System.out.println("** 100-vuotias! **");
+            }
+            // Jos ikä on 65 vuotta, toivotetaan hyviä eläkepäiviä.
+            else if (ika == 65) {
+                System.out.println("Hyviä eläkepäiviä!");
             }
         }
         // Kerrotaan 18-64 -vuotiaille, että he ovat aikuisia.
@@ -40,6 +44,10 @@ public class App {
             // Jos käyttäjän ikä on tasaluku, onnitellaan lisäksi.
             else if (ika % 10 == 0) {
                 System.out.println("Onnea tasavuosista!");
+            }
+            // Jos käyttäjän ikä on 58 vuotta tai yli, kerrotaan varhaiseläkkeen mahdollisuudesta.
+            else if (ika >= 58) {
+                System.out.println("Voit mennä nyt varhaiseläkkeelle.");
             }
         }
     }
